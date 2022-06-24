@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>María Florencia Marbián, dwn3av PWA</title>
+    <meta charset="UTF-8">
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css"
+    />
+        <link rel="shortcut icon" href="img/icons/icon-192x192.png" type="image/x-icon">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Acme&display=swap"
+          rel="stylesheet"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Acme&display=swap"
+          rel="stylesheet"
+        />
+        <link rel="stylesheet" href="css/styles.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+        <script>
+          $(document).ready(function () {
+            $(".slider").bxSlider();
+          });
+        </script>
+        <link rel="manifest" href="manifest.json" />
+
+</head>
+
+<body>
+    <header class="container-index">
+        <h1>Personajes</h1>
+        
+        <nav class="navbar navbar-expand-lg navbar-dark  pt-1">
+            <div class="container-fluid">
+             
+       
+                  <li class="nav-item px-2">
+                    <a class="nav-link size" href="#">Home</a>
+                  </li>
+                  <li class="nav-item px-2">
+                    <a class="nav-link size" href="vistas/favoritos.html">Favoritos</a>
+                  </li>
+                  <li class="nav-item px-2">
+                    <a class="nav-link size" href="vistas/episodios.html">Episodios</a>
+                  </li>
+               
+                </ul>
+              </div>
+            </div>
+          </nav>
+        <div class="container container-search mt-5">
+            <form class="form-inline my-2 my-lg-0 search">
+                <input class="form-control mr-sm-2" type="search" placeholder="Buscá tu personaje..." aria-label="Search" id="search" />
+                <button class="btn btn-outline-success my-2 my-sm-0" type="button" id="sendButton">Search</button>
+            </form>
+            <div class="container spinner d-none" id="spinner">
+                <div class="spinner-border" role="status">
+                    <span class="sr-only">Loading...</span>
+                </div>
+            </div>
+        </div>
+    </header>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#black" fill-opacity="1" d="M0,32L80,58.7C160,85,320,139,480,149.3C640,160,800,128,960,149.3C1120,171,1280,245,1360,282.7L1440,320L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path></svg> 
+<div class="container-personajes">
+    <ul id="main" class="row"></ul>
+</div>
+<section id="offline-video">
+    <h3>Estamos <span>OFFLINE</span>  pero no te aburras!</h3>
+
+    <figure>
+      <video id="slider" autoplay  muted loop>
+        <source src="video/rick_morty.mp4" type="video/mp4" />
+      </video>
+      <ul class="multimedia">
+        <li onclick="videoUrl('video/rick_morty1.mp4')">
+          <img src="img/rickmorty1.jpg" alt="Rick Morty Video 1" />
+        </li>
+        <li onclick="videoUrl('video/rick_morty2.mp4')">
+          <img src="img/rickmorty2.jpg" alt="Rick Morty Video 2" />
+        </li>
+        <li onclick="videoUrl('video/rick_morty3.mp4')">
+          <img src="img/rickmorty3.jpg" alt="Rick Morty Video 3" />
+        </li>
+        <li onclick="videoUrl('video/rick_morty3.mp4')">
+          <img src="img/rickmorty4.jpg" alt="Rick Morty Video 4" />
+        </li>
+      </ul>
+    </figure>
+  </section>
+
+
+        <script>
+            function videoUrl(hmmmmmm) {
+              document.getElementById("slider").src = hmmmmmm;
+            }
+          </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+
+    <script src="./js/register-sw.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
